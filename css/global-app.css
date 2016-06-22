@@ -1,0 +1,200 @@
+@charset "UTF-8";
+body, html {
+  background-color: #EDEBEC;
+  margin: 0;
+  padding: 0;
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Chrome/Safari/Opera */
+  -khtml-user-select: none;
+  /* Konqueror */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  /* Para habilitar la selección de un elemento @include user-select(text); */
+  height: 100%; }
+
+.navbar {
+  background-color: #333;
+  height: 50px; }
+
+.navbar a {
+  color: white; }
+
+.navbar h1 {
+  margin: 0;
+  padding: 0;
+  font-size: 24px;
+  color: #FFF;
+  text-align: center;
+  line-height: 50px; }
+
+.navbar .arrow-back {
+  position: absolute;
+  left: 0;
+  margin-left: 10px;
+  line-height: 50px; }
+
+#view {
+  height: 100%; }
+
+.view-container {
+  overflow: auto;
+  padding: 20px;
+  height: 100%; }
+  .view-container .content {
+    margin-top: 50px; }
+
+/** CHAT **/
+.chat-view {
+  position: relative;
+  height: 100%; }
+
+.discussion {
+  padding: 0;
+  margin-bottom: 38px;
+  overflow: hidden; }
+  .discussion .message-container {
+    width: 75%;
+    display: block;
+    margin-bottom: 5px;
+    clear: both; }
+    .discussion .message-container .avatar {
+      width: 45px; }
+      .discussion .message-container .avatar img {
+        border-radius: 50%;
+        -moz-border-radius: 50%;
+        -webkit-border-radius: 50%; }
+    .discussion .message-container .messages {
+      padding: 7px 12px;
+      border-radius: 15px;
+      -moz-border-radius: 15px;
+      -webkit-border-radius: 15px; }
+      .discussion .message-container .messages p {
+        margin: 0;
+        word-break: break-all;
+        font-size: 18px;
+        -webkit-touch-callout: text;
+        /* iOS Safari */
+        -webkit-user-select: text;
+        /* Chrome/Safari/Opera */
+        -khtml-user-select: text;
+        /* Konqueror */
+        -moz-user-select: text;
+        /* Firefox */
+        -ms-user-select: text;
+        /* Internet Explorer/Edge */
+        user-select: text;
+        /* Para habilitar la selección de un elemento @include user-select(text); */ }
+  .discussion .me .message-container {
+    float: left; }
+    .discussion .me .message-container .avatar {
+      display: none; }
+    .discussion .me .message-container .messages {
+      background-color: #87CEEB;
+      color: white;
+      float: left; }
+  .discussion .stranger .message-container {
+    float: right; }
+    .discussion .stranger .message-container .avatar {
+      float: right; }
+    .discussion .stranger .message-container .messages {
+      background-color: #DCDCDC;
+      color: black;
+      margin-right: 60px; }
+
+/** FORM **/
+.chat-form {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 10px;
+  /*border-top: solid 1px $backgroundColor - 35; */
+  background-color: #EDEBEC;
+  clear: both; }
+  .chat-form input {
+    max-width: 100%;
+    padding-left: 18px;
+    font-size: 18px;
+    -webkit-touch-callout: text;
+    /* iOS Safari */
+    -webkit-user-select: text;
+    /* Chrome/Safari/Opera */
+    -khtml-user-select: text;
+    /* Konqueror */
+    -moz-user-select: text;
+    /* Firefox */
+    -ms-user-select: text;
+    /* Internet Explorer/Edge */
+    user-select: text;
+    /* Para habilitar la selección de un elemento @include user-select(text); */
+    border-radius: 20px;
+    -moz-border-radius: 20px;
+    -webkit-border-radius: 20px;
+    height: 40px; }
+  .chat-form input:active {
+    box-shadow: none; }
+  .chat-form button {
+    border-radius: 20px;
+    -moz-border-radius: 20px;
+    -webkit-border-radius: 20px;
+    height: 40px; }
+  .chat-form button:before {
+    /* content: "\f061"; */ }
+
+/** PROFILE **/
+.profile-view {
+  position: relative;
+  height: 100%; }
+  .profile-view .profile-container {
+    margin-bottom: 20px; }
+  .profile-view .profile-picture {
+    position: relative;
+    margin: 0 auto 20px auto;
+    padding: 25px;
+    max-width: 500px; }
+    .profile-view .profile-picture img {
+      max-width: 100%;
+      height: auto;
+      margin: auto;
+      border-radius: 50%;
+      -moz-border-radius: 50%;
+      -webkit-border-radius: 50%; }
+    .profile-view .profile-picture .status {
+      border-radius: 50%;
+      -moz-border-radius: 50%;
+      -webkit-border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      text-align: center;
+      line-height: 60px;
+      margin: 30px;
+      position: absolute;
+      top: 0;
+      right: 0;
+      background-color: green;
+      color: white; }
+
+.friend-request {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 10px;
+  background-color: #EDEBEC; }
+  .friend-request .addasfriend-button {
+    display: block;
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    font-size: 16px;
+    background-color: #333;
+    text-align: center;
+    text-transform: uppercase;
+    color: #FFF;
+    border: 0; }
+  .friend-request .addasfriend-button:active {
+    background-color: red;
+    transform: scale(0.95); }

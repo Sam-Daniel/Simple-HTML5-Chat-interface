@@ -1,0 +1,24 @@
+<div class="profile-view" ng-controller="profiles">
+
+    <div class="profile-container view-container">
+        
+        <div class="content">
+        
+            <div class="profile-picture">
+                <img src="img/profile-pic.jpg" />
+                <div class="status">Online</div>
+            </div>
+
+            <h1>{{nombre}}</h1>
+            <p>{{description}}</p>
+        
+        </div>
+    
+    </div>
+    
+    
+    <div class="friend-request">
+        <a class="addasfriend-button" ng-href="#/chat/{{userId}}">Chat me</a>
+    </div>
+    
+</div>

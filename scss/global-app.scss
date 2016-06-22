@@ -1,0 +1,50 @@
+@import "theme";
+@import "mixins";
+
+
+body, html {
+    background-color: $backgroundColor;
+    margin: 0;
+    padding: 0;
+    @include user-select(none);
+    height: 100%;
+}
+
+.navbar {
+    background-color: $interfaceColor;
+    height: $navbarSize;
+}
+
+.navbar {
+    
+    a {color:white}
+    
+    h1 {
+        margin:0;
+        padding:0;
+        font-size: 24px;
+        color: #FFF;
+        text-align:center;
+        line-height: $navbarSize;
+    }
+    
+    .arrow-back {
+        position:absolute;
+        left: 0;
+        margin-left:10px;
+        line-height: $navbarSize;
+    }
+}
+
+#view {height:100%;}
+
+.view-container {
+    overflow: auto;
+    padding: 20px;
+    height: 100%;
+    
+    .content {margin-top: $navbarSize;}
+}
+
+@import "chat";
+@import "profile";

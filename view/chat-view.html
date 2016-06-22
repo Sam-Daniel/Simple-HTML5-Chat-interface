@@ -1,0 +1,48 @@
+<div class="chat-view" ng-controller="chat">
+
+    <div id="view-container" class="chat-container view-container" ng-scroll-bottom="messages">
+        
+        <div class="content">
+            
+            <div class="discussion">
+                
+                <div ng-repeat="message in messages">
+                    <div class="{{message.class}}">
+                        
+                        <div class="message-container">
+                            <div class="avatar">
+                                <img class="img-responsive" src="img/profile-pic.jpg" />
+                            </div>
+                            <div class="messages">
+                                <p>{{message.message}}</p>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div> <!-- End loop -->
+            
+            </div>
+            
+            
+            
+            
+            
+            
+        </div>
+    
+    </div>
+    
+    <div class="chat-form">
+        
+        <form ng-submit="sendMessage()">
+            <div class="input-group">
+                <input ng-model="messageText" focus-on="newItemAdded" type="text" class="form-control" placeholder="Type a message">
+                <span class="input-group-btn">
+                    <button type="submit" class="btn btn-default" type="button">Send</button>
+                </span>
+            </div>
+        </form>
+        
+    </div>
+    
+</div>

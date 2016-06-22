@@ -1,0 +1,20 @@
+// Disabling selection
+
+@mixin user-select($select) {
+    -webkit-touch-callout: $select; /* iOS Safari */
+    -webkit-user-select: $select;   /* Chrome/Safari/Opera */
+    -khtml-user-select: $select;    /* Konqueror */
+    -moz-user-select: $select;      /* Firefox */
+    -ms-user-select: $select;       /* Internet Explorer/Edge */
+    user-select: $select;    
+    
+    /* Para habilitar la selección de un elemento @include user-select(text); */
+}
+
+// BORDER RADIUS
+
+@mixin border-radius($radius) {
+    border-radius: $radius;
+    -moz-border-radius: $radius;
+    -webkit-border-radius: $radius;
+}

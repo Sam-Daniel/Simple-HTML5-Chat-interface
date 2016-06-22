@@ -1,0 +1,90 @@
+@import "theme";
+@import "mixins";
+
+
+/** CHAT **/
+
+.chat-view {
+    position: relative;
+    height:100%;
+}
+
+.discussion {
+    padding: 0;
+    margin-bottom: 38px;
+    overflow: hidden;
+    
+    .message-container {
+        width:75%;
+        display: block;
+        margin-bottom: 5px;
+        clear:both;
+        
+        .avatar {
+            width: 45px;
+            
+            img {@include border-radius(50%);}
+        }
+        
+        .messages {
+            padding: 7px 12px;
+            @include border-radius(15px);
+            
+            p {
+                margin:0;
+                word-break: break-all;
+                font-size: $chatFontSize;
+                @include user-select(text);
+            }
+        }
+    }
+    .me {
+        .message-container {
+            float:left;
+            
+            .avatar {display:none}
+            .messages {background-color: $chatMeColor; color:white; float:left;}
+        }
+    }
+    .stranger {
+        .message-container {
+            float:right;
+            
+            .avatar {float:right;}
+            .messages {background-color: $chatStrangeColor; color:black; margin-right: 60px;}
+        }
+    }
+    
+}
+
+
+
+/** FORM **/
+
+.chat-form {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 10px;
+    /*border-top: solid 1px $backgroundColor - 35; */
+    background-color: $backgroundColor;
+    clear:both;
+    
+    input {
+        max-width: 100%;
+        padding-left: 18px;
+        font-size: $chatFontSize;
+        @include user-select(text);
+        @include border-radius(20px);
+        height: $formSize;
+    }
+    input:active {box-shadow: none}
+    
+    button {
+        @include border-radius(20px);
+        height: $formSize;
+    }
+    button:before {
+        /* content: "\f061"; */
+    }
+}
